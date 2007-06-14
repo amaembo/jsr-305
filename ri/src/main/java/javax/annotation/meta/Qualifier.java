@@ -7,8 +7,6 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-
-
 /**
  * This qualifier is applied to an annotation to denote that the annotation
  * should be treated as a type qualifier.

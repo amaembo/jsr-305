@@ -10,7 +10,8 @@ import javax.annotation.meta.QualifierChecker;
 import javax.annotation.meta.When;
 
 @Documented
-@Qualifier
+@Qualifier(applicableTo=String.class)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface Pattern {
 	@RegEx String value();
     ElementType[] applyTo() default {};

@@ -6,14 +6,13 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import javax.annotation.meta.QualifierNickname;
-import javax.annotation.meta.When;
-
 @Documented
-@QualifierNickname
-@Nonnull(when=When.UNKNOWN)
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Nullable {
-    ElementType[] applyTo() default {};
+/**
+ *  Used to annotate a method parameter to indicate that 
+ *  this method will not close the resource.
+ */
+public @interface WillClose {
 
 }
