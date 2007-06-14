@@ -7,9 +7,10 @@ import java.lang.annotation.RetentionPolicy;
 
 import javax.annotation.meta.When;
 
+/** Used to annotate a value that should only contain nonnegative values */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Nonnull {
+public @interface Nonnegative {
 	When when() default When.ALWAYS;
 	ElementType[] applyTo() default {};
 }
