@@ -17,7 +17,8 @@ import javax.annotation.meta.When;
  *
  */
 @Documented
-@Qualifier
+@Qualifier(applicableTo=String.class)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface RegEx {
     When when() default When.ALWAYS;
     ElementType[] applyTo() default {};
@@ -36,7 +37,6 @@ public @interface RegEx {
 		}
 		
 	}
-	When when() default When.ALWAYS;
-	ElementType[] applyTo() default {};
+
 
 }

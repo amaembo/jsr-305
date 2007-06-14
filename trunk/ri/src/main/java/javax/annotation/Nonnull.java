@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
 import javax.annotation.meta.When;
 
 @Documented
+@Retention(RetentionPolicy.RUNTIME)
 public @interface Nonnull {
 	When when() default When.ALWAYS;
 	ElementType[] applyTo() default {};
