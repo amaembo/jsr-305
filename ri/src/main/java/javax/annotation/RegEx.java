@@ -4,7 +4,6 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
@@ -28,7 +27,7 @@ public @interface RegEx {
 			if (!(value instanceof String)) return When.MAYBE_NOT;
 
 			try {
-				Pattern p = Pattern.compile((String) value);
+				Pattern.compile((String) value);
 			} catch (PatternSyntaxException e) {
 				return When.MAYBE_NOT;
 			}

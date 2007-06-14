@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Documented
-@Target(ElementType.PARAMETER)
+@Target({ElementType.PARAMETER, ElementType.METHOD, ElementType.CONSTRUCTOR,ElementType.TYPE,ElementType.PACKAGE})
 @Retention(RetentionPolicy.RUNTIME)
 /**
  *  Used to annotate a constructor/factory parameter to indicate that 
