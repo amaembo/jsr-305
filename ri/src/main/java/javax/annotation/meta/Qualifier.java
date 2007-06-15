@@ -16,6 +16,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Qualifier {
 	Class <?> applicableTo() default Object.class;
+	boolean strict() default false;
 	Class <? extends QualifierChecker> checker() 
             default  DefaultQualifierChecker.class;
 }

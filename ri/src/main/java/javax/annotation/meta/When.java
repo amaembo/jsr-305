@@ -6,7 +6,8 @@ package javax.annotation.meta;
  *
  */
 public enum When {
-	/** S is a subset of T */ ALWAYS , 
+	/** Assume that S is a subset of T, but don't check on assignment/return */ ASSUME_ALWAYS,
+	/** S is a subset of T */ ALWAYS, 
 	/** nothing definitive is known about the relation between S and T */ UNKNOWN, 
 	/** S - T is nonempty */ MAYBE_NOT, 
 	/** S intersection T is empty */ NEVER;
