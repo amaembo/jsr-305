@@ -15,8 +15,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.ANNOTATION_TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Qualifier {
+	/** Describes the kinds of values the qualifier can be applied to. If a numeric class is provided (e.g., Number.class or Integer.class) then the annotation can also be applied to the corresponding primitive numeric types. */
 	Class <?> applicableTo() default Object.class;
 	boolean strict() default false;
-	Class <? extends QualifierChecker> checker() 
-            default  DefaultQualifierChecker.class;
 }

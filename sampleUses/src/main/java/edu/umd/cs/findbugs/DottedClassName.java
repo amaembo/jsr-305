@@ -1,4 +1,4 @@
-package javax.annotation;
+package edu.umd.cs.findbugs;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -9,9 +9,11 @@ import javax.annotation.meta.Qualifier;
 import javax.annotation.meta.When;
 
 @Documented
-@Qualifier(applicableTo=Object.class)
+@Qualifier(applicableTo=String.class)
+@DottedClassName(when = When.NEVER)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Nonnull {
+public @interface DottedClassName {
 	When when() default When.ALWAYS;
+
 	ElementType[] applyTo() default {};
 }

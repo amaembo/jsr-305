@@ -1,17 +1,15 @@
-package javax.annotation;
-
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.annotation.meta.Qualifier;
-import javax.annotation.meta.When;
+import javax.annotation.Pattern;
+import javax.annotation.meta.QualifierNickname;
 
 @Documented
-@Qualifier(applicableTo=Object.class)
+@QualifierNickname
+@Pattern("[0-9]{3}-[0-9]{2}-[0-9]{4}")
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Nonnull {
-	When when() default When.ALWAYS;
+public @interface SocialSecurityNumber {
 	ElementType[] applyTo() default {};
 }
