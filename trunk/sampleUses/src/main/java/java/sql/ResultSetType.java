@@ -1,17 +1,14 @@
-package javax.annotation;
+package java.sql;
 
 import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 import javax.annotation.meta.Qualifier;
-import javax.annotation.meta.When;
 
 @Documented
-@Qualifier
+@Qualifier(strict = true,applicableTo=Integer.class)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Untainted {
-	When when() default When.ALWAYS;
-	ElementType[] applyTo() default {};
+public @interface ResultSetType {
+
 }

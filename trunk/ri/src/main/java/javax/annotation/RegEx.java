@@ -24,12 +24,12 @@ public @interface RegEx {
 	static class Checker implements QualifierChecker<RegEx> {
 
 		public When forConstantValue(RegEx annotation, Object value) {
-			if (!(value instanceof String)) return When.MAYBE_NOT;
+			if (!(value instanceof String)) return When.NEVER;
 
 			try {
 				Pattern.compile((String) value);
 			} catch (PatternSyntaxException e) {
-				return When.MAYBE_NOT;
+				return When.NEVER;
 			}
 			return When.ALWAYS;
 
