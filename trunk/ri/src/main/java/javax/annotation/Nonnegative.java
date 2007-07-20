@@ -5,18 +5,18 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.annotation.meta.Qualifier;
-import javax.annotation.meta.QualifierChecker;
+import javax.annotation.meta.TypeQualifier;
+import javax.annotation.meta.TypeQualifierValidator;
 import javax.annotation.meta.When;
 
 /** Used to annotate a value that should only contain nonnegative values */
 @Documented
-@Qualifier(applicableTo=Number.class)
+@TypeQualifier(applicableTo=Number.class)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Nonnegative {
 	When when() default When.ALWAYS;
 	ElementType[] applyTo() default {};
-	class Checker implements QualifierChecker<Nonnegative> {
+	class Checker implements TypeQualifierValidator<Nonnegative> {
 
 		public When forConstantValue(Nonnegative annotation, Object v) {
 			if (!(v instanceof Number)) return When.NEVER;

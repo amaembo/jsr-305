@@ -5,12 +5,12 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.annotation.meta.QualifierNickname;
+import javax.annotation.meta.TypeQualifierNickname;
 import javax.annotation.meta.When;
 
 
 @Documented
-@QualifierNickname
+@TypeQualifierNickname
 @Untainted(when=When.ASSUME_ALWAYS)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Detainted {
