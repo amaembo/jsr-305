@@ -27,6 +27,6 @@ import java.lang.annotation.Target;
  */
 @Documented
 @Target(ElementType.ANNOTATION_TYPE)
-public @interface QualifierNickname {
+public @interface TypeQualifierNickname {
 
 }

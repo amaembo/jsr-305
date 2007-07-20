@@ -5,23 +5,24 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.annotation.meta.Qualifier;
-import javax.annotation.meta.QualifierChecker;
+import javax.annotation.meta.TypeQualifier;
+import javax.annotation.meta.TypeQualifierValidator;
 import javax.annotation.meta.When;
 
 @Documented
-@Qualifier(applicableTo=String.class)
+@TypeQualifier(applicableTo=String.class)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Pattern {
 	@RegEx String value();
+	int flags() default 0;
     ElementType[] applyTo() default {};
 	
-	static class Checker implements QualifierChecker<Pattern> {
-
+	static class Checker implements TypeQualifierValidator<Pattern> {
 		public When forConstantValue(Pattern annotation, Object value) {
-			if (java.util.regex.Pattern.matches(annotation.value(), (String)value))
+			java.util.regex.Pattern p = java.util.regex.Pattern.compile(annotation.value(), annotation.flags());
+			if (p.matcher(((String)value)).matches())
 				return When.ALWAYS;
-			return When.MAYBE_NOT;
+			return When.NEVER;
 		}
 		
 	}

@@ -2,7 +2,9 @@ package javax.annotation.meta;
 
 import java.lang.annotation.Annotation;
 
-public interface QualifierChecker<A extends Annotation> {
+import javax.annotation.Nonnull;
+
+public interface TypeQualifierValidator<A extends Annotation> {
     /**
      * Given a type qualifier, check to see if a value is an instance of the
      * set of values denoted by the qualifier
@@ -11,5 +13,5 @@ public interface QualifierChecker<A extends Annotation> {
      * @param value
      * @return
      */
-	public When forConstantValue(A qualifierqualifierArgument, Object value);
+	public @Nonnull When forConstantValue(@Nonnull A qualifierqualifierArgument, Object value);
 }

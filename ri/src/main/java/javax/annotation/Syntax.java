@@ -5,7 +5,7 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.annotation.meta.Qualifier;
+import javax.annotation.meta.TypeQualifier;
 import javax.annotation.meta.When;
 
 /**
@@ -18,7 +18,7 @@ import javax.annotation.meta.When;
  *
  */
 @Documented
-@Qualifier(applicableTo=String.class)
+@TypeQualifier(applicableTo=String.class)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Syntax {
     /** Value indicating the particular syntax denoted by this annotation.
