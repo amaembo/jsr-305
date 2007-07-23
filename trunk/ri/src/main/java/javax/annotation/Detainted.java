@@ -11,7 +11,7 @@ import javax.annotation.meta.When;
 
 @Documented
 @TypeQualifierNickname
-@Untainted(when=When.ASSUME_ALWAYS)
+@Untainted(when=When.ALWAYS)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Detainted {
     ElementType[] applyTo() default {};
