@@ -3,13 +3,19 @@ package javax.annotation.meta;
 /**
  * Used to describe the relationship between a qualifier T and the set of values S possible 
  * on an annotated element.
+ * 
+ * In particular, an issues should be reported if an ALWAYS, MAYBE_YES, or MAYBE_EITHER 
+ * value is used where a NEVER value is required, or if a NEVER, MAYBE_NO, or MAYBE_EITHER
+ * value is used where an ALWAYS value is required.
+ * 
  *
  */
 public enum When {
-	/** Assume that S is a subset of T, but don't check on assignment/return */ ASSUME_ALWAYS,
 	/** S is a subset of T */ ALWAYS, 
+	/** S intersection T is non empty */ MAYBE_YES,
 	/** nothing definitive is known about the relation between S and T */ UNKNOWN, 
 	/** S - T is nonempty */ MAYBE_NOT, 
+	/** S intersection T is non empty and S - T is nonempty */ MAYBE_EITHER, 
 	/** S intersection T is empty */ NEVER;
 	
 }
