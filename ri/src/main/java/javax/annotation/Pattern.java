@@ -15,7 +15,7 @@ import javax.annotation.meta.When;
 public @interface Pattern {
 	@RegEx String value();
 	int flags() default 0;
-    ElementType[] applyTo() default {};
+    ElementType[] defaultFor() default {};
 	
 	static class Checker implements TypeQualifierValidator<Pattern> {
 		public When forConstantValue(Pattern annotation, Object value) {

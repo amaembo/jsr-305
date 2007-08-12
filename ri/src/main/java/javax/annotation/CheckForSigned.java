@@ -16,6 +16,6 @@ import javax.annotation.meta.When;
 @Nonnegative(when=When.MAYBE_NOT)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CheckForSigned {
-    ElementType[] applyTo() default {};
+    ElementType[] defaultFor() default {};
 
 }

@@ -13,5 +13,5 @@ import javax.annotation.meta.When;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PropertyKey {
 	When when() default When.ALWAYS;
-	ElementType[] applyTo() default {};
+	ElementType[] defaultFor() default {};
 }
