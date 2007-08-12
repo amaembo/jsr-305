@@ -14,7 +14,7 @@ import javax.annotation.meta.When;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Nonnull {
 	When when() default When.ALWAYS;
-	ElementType[] applyTo() default {};
+	ElementType[] defaultFor() default {};
 	static class Checker implements TypeQualifierValidator<Nonnull> {
 
 		public When forConstantValue(Nonnull qualifierqualifierArgument,

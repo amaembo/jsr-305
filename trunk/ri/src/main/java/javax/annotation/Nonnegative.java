@@ -15,7 +15,7 @@ import javax.annotation.meta.When;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Nonnegative {
 	When when() default When.ALWAYS;
-	ElementType[] applyTo() default {};
+	ElementType[] defaultFor() default {};
 	class Checker implements TypeQualifierValidator<Nonnegative> {
 
 		public When forConstantValue(Nonnegative annotation, Object v) {

@@ -13,6 +13,6 @@ import javax.annotation.meta.When;
 @Nonnull(when=When.UNKNOWN)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Nullable {
-    ElementType[] applyTo() default {};
+    ElementType[] defaultFor() default {};
 
 }

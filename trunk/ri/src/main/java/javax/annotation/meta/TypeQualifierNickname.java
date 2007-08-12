@@ -19,7 +19,7 @@ import java.lang.annotation.Target;
  @QualifierNickname @Pattern("[0-9]{3}-[0-9]{2}-[0-9]{4}") 
  @Retention(RetentionPolicy.RUNTIME)
  public @interface SocialSecurityNumber {
- ElementType[] applyTo() default {};
+ ElementType[] defaultFor() default {};
  }
  </code>
  * 

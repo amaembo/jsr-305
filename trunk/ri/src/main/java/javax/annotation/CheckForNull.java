@@ -14,6 +14,6 @@ import javax.annotation.meta.When;
 @Nonnull(when=When.MAYBE_NOT)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CheckForNull {
-    ElementType[] applyTo() default {};
+    ElementType[] defaultFor() default {};
 
 }

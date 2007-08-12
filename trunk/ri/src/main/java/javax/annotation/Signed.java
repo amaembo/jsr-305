@@ -16,6 +16,6 @@ import javax.annotation.meta.When;
 @Nonnegative(when=When.UNKNOWN)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Signed {
-    ElementType[] applyTo() default {};
+    ElementType[] defaultFor() default {};
 
 }

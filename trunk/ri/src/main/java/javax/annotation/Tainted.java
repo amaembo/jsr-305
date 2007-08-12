@@ -14,6 +14,6 @@ import javax.annotation.meta.When;
 @Untainted(when=When.MAYBE_NOT)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Tainted {
-    ElementType[] applyTo() default {};
+    ElementType[] defaultFor() default {};
 
 }

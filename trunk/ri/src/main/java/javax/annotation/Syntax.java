@@ -40,5 +40,5 @@ public @interface Syntax {
      */
 	String value();
     When when() default When.ALWAYS;
-    ElementType[] applyTo() default {};
+    ElementType[] defaultFor() default {};
 }
