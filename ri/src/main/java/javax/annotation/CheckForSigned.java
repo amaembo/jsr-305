@@ -13,7 +13,7 @@ import javax.annotation.meta.When;
 
 @Documented
 @TypeQualifierNickname
-@Nonnegative(when=When.MAYBE_NOT)
+@Nonnegative(when=When.MAYBE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CheckForSigned {
     ElementType[] defaultFor() default {};
