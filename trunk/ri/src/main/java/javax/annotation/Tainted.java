@@ -11,7 +11,7 @@ import javax.annotation.meta.When;
 
 @Documented
 @TypeQualifierNickname
-@Untainted(when=When.MAYBE_NOT)
+@Untainted(when=When.MAYBE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Tainted {
     ElementType[] defaultFor() default {};

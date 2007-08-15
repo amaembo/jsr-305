@@ -11,7 +11,7 @@ import javax.annotation.meta.When;
 
 @Documented
 @TypeQualifierNickname
-@Nonnull(when=When.MAYBE_NOT)
+@Nonnull(when=When.MAYBE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CheckForNull {
     ElementType[] defaultFor() default {};
