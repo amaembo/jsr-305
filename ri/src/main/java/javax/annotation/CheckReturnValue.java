@@ -13,5 +13,4 @@ import javax.annotation.meta.When;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CheckReturnValue {
 	When when() default When.ALWAYS;
-	ElementType[] defaultFor() default {};
 }
