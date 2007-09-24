@@ -1,7 +1,6 @@
 package javax.annotation;
 
 import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -15,7 +14,6 @@ import javax.annotation.meta.When;
 public @interface Pattern {
 	@RegEx String value();
 	int flags() default 0;
-    ElementType[] defaultFor() default {};
 	
 	static class Checker implements TypeQualifierValidator<Pattern> {
 		public When forConstantValue(Pattern annotation, Object value) {

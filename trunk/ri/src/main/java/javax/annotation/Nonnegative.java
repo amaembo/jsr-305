@@ -1,7 +1,6 @@
 package javax.annotation;
 
 import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -15,7 +14,6 @@ import javax.annotation.meta.When;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Nonnegative {
 	When when() default When.ALWAYS;
-	ElementType[] defaultFor() default {};
 	class Checker implements TypeQualifierValidator<Nonnegative> {
 
 		public When forConstantValue(Nonnegative annotation, Object v) {
