@@ -4,10 +4,10 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import javax.annotation.meta.Qualifier;
+import javax.annotation.meta.TypeQualifier;
 
 @Documented
-@Qualifier(strict = true,applicableTo=Integer.class)
+@TypeQualifier(applicableTo=Integer.class)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ResultSetConcurrency {
 
