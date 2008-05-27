@@ -11,5 +11,4 @@ import javax.annotation.meta.TypeQualifierNickname;
 @MatchesPattern("[0-9]{3}-[0-9]{2}-[0-9]{4}")
 @Retention(RetentionPolicy.RUNTIME)
 public @interface SocialSecurityNumber {
-	ElementType[] applyTo() default {};
 }

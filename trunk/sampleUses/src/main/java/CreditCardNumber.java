@@ -13,8 +13,6 @@ import javax.annotation.meta.When;
 @MatchesPattern("[0-9]{16}")
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CreditCardNumber {
-	ElementType[] applyTo() default {};
-
 	class Checker implements TypeQualifierValidator<CreditCardNumber> {
 
 		public When forConstantValue(CreditCardNumber annotation, Object v) {
