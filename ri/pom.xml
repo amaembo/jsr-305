@@ -14,7 +14,7 @@
 	<packaging>jar</packaging>
 	<name>JSR 305 Implementation</name>
 	<version>0.1-SNAPSHOT</version>
-	<description>Implementation for JS-305</description>
+	<description>Implementation for JSR-305</description>
 
 
 </project>
