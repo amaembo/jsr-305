@@ -12,7 +12,7 @@
 	<groupId>org.jsr-305</groupId>
 	<artifactId>sampleUses</artifactId>
 	<packaging>jar</packaging>
-	<name>JSR 305 Sample Uses Cases</name>
+	<name>JSR 305 Sample Use Cases</name>
 	<version>0.1-SNAPSHOT</version>
 	<description>Use Cases for JSR-305</description>
 	<dependencies>
