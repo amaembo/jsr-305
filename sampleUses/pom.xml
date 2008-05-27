@@ -15,4 +15,12 @@
 	<name>JSR 305 Sample Uses Cases</name>
 	<version>0.1-SNAPSHOT</version>
 	<description>Use Cases for JS-305</description>
+	<dependencies>
+               <dependency>
+                       <groupId>org.jsr-305</groupId>
+                       <artifactId>ri</artifactId>
+                       <version>0.1-SNAPSHOT</version>
+               </dependency>
+       </dependencies>
+
 </project>
