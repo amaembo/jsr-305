@@ -12,9 +12,9 @@ import java.lang.annotation.RetentionPolicy;
  * and the enumeration is an exhaustive list of the possible values.
  * 
  * For example, the following defines a type qualifier such that if you know
- * a value is neither @Foo(Color.Red) or @Foo(Color.Blue), then the value must be
- * @Foo(Color.Green). And if you know it is @Foo(Color.Green), you know it cannot
- * be @Foo(Color.Red) or @Foo(Color.Blue)
+ * a value is neither {@literal @Foo(Color.Red)} or {@literal @Foo(Color.Blue)}, then the value must be
+ * {@literal @Foo(Color.Green)}. And if you know it is {@literal @Foo(Color.Green)}, you know it cannot
+ * be {@literal @Foo(Color.Red)} or {@literal @Foo(Color.Blue)}
  *  
  * <code>
  * @TypeQualifier  @interface Foo {

@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * that is annotated as a TypeQualifier. 
  * 
  * For example, the following defines a type qualifier such that if you know
- * a value is  @Foo(1), then the value cannot be @Foo(2) or @Foo(3).
+ * a value is  {@literal @Foo(1)}, then the value cannot be {@literal @Foo(2)} or {{@literal @Foo(3)}.
  *  
  * <code>
  * @TypeQualifier @interface Foo {
