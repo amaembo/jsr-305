@@ -15,7 +15,7 @@
 	<packaging>jar</packaging>
 	<name>JSR 305 Test Cases</name>
 	<version>0.1-SNAPSHOT</version>
-	<description>Test Cases for JS-305 Implementations</description>
+	<description>Test Cases for JSR-305 Implementations</description>
 
 	<dependencies>
 		<dependency>

@@ -15,5 +15,5 @@
 	<packaging>jar</packaging>
 	<name>JSR 305 Proposed Annotations</name>
 	<version>0.1-SNAPSHOT</version>
-	<description>Proposed Annotations for JS-305</description>
+	<description>Proposed Annotations for JSR-305</description>
 </project>
