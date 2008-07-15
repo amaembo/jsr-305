@@ -16,7 +16,7 @@ import java.lang.annotation.Target;
  * 
  * <code>
  @Documented
- @QualifierNickname @Pattern("[0-9]{3}-[0-9]{2}-[0-9]{4}") 
+ @TypeQualifierNickname @Pattern("[0-9]{3}-[0-9]{2}-[0-9]{4}") 
  @Retention(RetentionPolicy.RUNTIME)
  public @interface SocialSecurityNumber {
  }
