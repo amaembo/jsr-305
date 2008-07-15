@@ -1,10 +1,8 @@
 package javax.annotation.meta;
 
 import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 
 /** This annotation can be applied to the value() element of an annotation
  * that is annotated as a TypeQualifier. 
