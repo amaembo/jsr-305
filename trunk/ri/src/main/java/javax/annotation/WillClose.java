@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 /**
  *  Used to annotate a method parameter to indicate that 
- *  this method will not close the resource.
+ *  this method will close the resource.
  */
 public @interface WillClose {
 
