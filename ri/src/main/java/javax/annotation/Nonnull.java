@@ -12,13 +12,15 @@ import javax.annotation.meta.When;
 @TypeQualifier
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Nonnull {
-	When when() default When.ALWAYS;
-	static class Checker implements TypeQualifierValidator<Nonnull> {
+    When when() default When.ALWAYS;
 
-		public When forConstantValue(Nonnull qualifierqualifierArgument,
-				Object value) {
-			if (value == null) return When.NEVER;
-			return When.ALWAYS;
-		}
-	}
+    static class Checker implements TypeQualifierValidator<Nonnull> {
+
+        public When forConstantValue(Nonnull qualifierqualifierArgument,
+                Object value) {
+            if (value == null)
+                return When.NEVER;
+            return When.ALWAYS;
+        }
+    }
 }
