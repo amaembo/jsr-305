@@ -11,7 +11,9 @@ import java.lang.annotation.Target;
  * be interpreted as having the same meaning as applying all of annotations of X
  * (other than QualifierNickname) to Y.
  * 
- * <p>Thus, you might define a qualifier SocialSecurityNumber as follows:</p>
+ * <p>
+ * Thus, you might define a qualifier SocialSecurityNumber as follows:
+ * </p>
  * 
  * 
  * <code>

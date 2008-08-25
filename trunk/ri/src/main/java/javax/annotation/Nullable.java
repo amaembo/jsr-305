@@ -9,7 +9,7 @@ import javax.annotation.meta.When;
 
 @Documented
 @TypeQualifierNickname
-@Nonnull(when=When.UNKNOWN)
+@Nonnull(when = When.UNKNOWN)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Nullable {
 
