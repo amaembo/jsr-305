@@ -17,7 +17,7 @@ import javax.annotation.meta.When;
  * 
  */
 @Documented
-@TypeQualifier(applicableTo = String.class)
+@TypeQualifier(applicableTo = CharSequence.class)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Syntax {
     /**
