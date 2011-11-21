@@ -25,6 +25,9 @@
             <fileset dir="src/main/java"/>
             <fileset dir="build/classes"/>
         </jar>
+        <jar destfile="build/jsr305-pure.jar">
+            <fileset dir="build/classes"/>
+        </jar>
         <jar destfile="build/jsr305-src.jar">
             <fileset dir="src/main/java"/>
             <fileset dir="src/main/resources"/>
