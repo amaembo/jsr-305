@@ -1,0 +1,1 @@
+This project contains reference implementations, test cases, and other documents under source code control for Java Specification Request 305: Annotations for Software Defect Detection. More information at the Google group: http://groups.google.com/group/jsr-305
