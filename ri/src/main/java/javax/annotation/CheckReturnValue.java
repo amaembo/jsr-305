@@ -8,6 +8,10 @@ import java.lang.annotation.Target;
 
 import javax.annotation.meta.When;
 
+/**
+ * This annotation is used to denote a method whose return value should always
+ * be checked after invoking the method.
+ */
 @Documented
 @Target( { ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.TYPE,
         ElementType.PACKAGE })

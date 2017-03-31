@@ -9,6 +9,11 @@ import javax.annotation.meta.TypeQualifier;
 import javax.annotation.meta.TypeQualifierValidator;
 import javax.annotation.meta.When;
 
+/**
+ * This annotation is used to denote String values that should always match given pattern.
+ * <p>
+ * When this annotation is applied to a method it applies to the method return value.
+ */
 @Documented
 @TypeQualifier(applicableTo = String.class)
 @Retention(RetentionPolicy.RUNTIME)

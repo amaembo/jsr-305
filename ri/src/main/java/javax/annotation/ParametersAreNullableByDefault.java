@@ -14,13 +14,13 @@ import javax.annotation.meta.TypeQualifierDefault;
  * <li>An explicit nullness annotation
  * <li>The method overrides a method in a superclass (in which case the
  * annotation of the corresponding parameter in the superclass applies)
- * <li> there is a default parameter annotation applied to a more tightly nested
- * element.
+ * <li>There is a default parameter annotation applied to a more tightly nested element.
  * </ul>
  * <p>This annotation implies the same "nullness" as no annotation. However, it is different
- * than having no annotation, as it is inherited and it can override a ParametersAreNonnullByDefault
+ * than having no annotation, as it is inherited and it can override a {@link ParametersAreNonnullByDefault}
  * annotation at an outer scope.
- * 
+ *
+ * @see Nullable
  */
 @Documented
 @Nullable

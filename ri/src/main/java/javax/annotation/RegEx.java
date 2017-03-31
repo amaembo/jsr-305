@@ -13,7 +13,8 @@ import javax.annotation.meta.When;
 /**
  * This qualifier is used to denote String values that should be a Regular
  * expression.
- * 
+ * <p>
+ * When this annotation is applied to a method it applies to the method return value.
  */
 @Documented
 @Syntax("RegEx")

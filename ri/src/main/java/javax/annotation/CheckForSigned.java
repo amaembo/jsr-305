@@ -14,7 +14,6 @@ import javax.annotation.meta.When;
  * nonnegative, and check for it being nonnegative before using it in a way that
  * requires it to be negative.
  */
-
 @Documented
 @TypeQualifierNickname
 @Nonnegative(when = When.MAYBE)

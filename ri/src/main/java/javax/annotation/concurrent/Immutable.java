@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2005 Brian Goetz
+ * Released under the Creative Commons Attribution License
+ *   (http://creativecommons.org/licenses/by/2.5)
+ * Official home: http://www.jcip.net
+ */
 package javax.annotation.concurrent;
 
 import java.lang.annotation.Documented;
@@ -6,16 +12,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/*
- * Copyright (c) 2005 Brian Goetz
- * Released under the Creative Commons Attribution License
- *   (http://creativecommons.org/licenses/by/2.5)
- * Official home: http://www.jcip.net
- */
-
 /**
- * Immutable
- * 
  * The class to which this annotation is applied is immutable. This means that
  * its state cannot be seen to change by callers. Of necessity this means that
  * all public fields are final, and that all public final reference fields refer
@@ -25,7 +22,7 @@ import java.lang.annotation.Target;
  * performance optimization; some state variables may be lazily computed, so
  * long as they are computed from immutable state and that callers cannot tell
  * the difference.
- * 
+ * <p>
  * Immutable objects are inherently thread-safe; they may be passed between
  * threads or published without synchronization.
  */
