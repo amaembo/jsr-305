@@ -9,7 +9,7 @@
   </parent>
   <groupId>com.google.code.findbugs</groupId>
   <artifactId>jsr305</artifactId>
-  <version>3.0.2</version>
+  <version>3.0.3-SNAPSHOT</version>
   <packaging>jar</packaging>
   <url>http://findbugs.sourceforge.net/</url>
   <name>FindBugs-jsr305</name>
@@ -74,25 +74,25 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.4.0</version>
-        <extensions>true</extensions>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-maven-plugin</artifactId>
+        <version>3.3.0</version>
         <executions>
-          <execution>
-            <id>bundle-manifest</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>manifest</goal>
-            </goals>
-          </execution>
+            <execution>
+                <goals>     
+                    <goal>bnd-process</goal>
+                </goals>
+            </execution>
         </executions>
         <configuration>
-          <instructions>
-            <Bundle-SymbolicName>org.jsr-305</Bundle-SymbolicName>
-            <Bundle-Name>${project.name}</Bundle-Name>
-            <Export-Package>javax.annotation;javax.annotation.concurrent;javax.annotation.meta</Export-Package>
-          </instructions>
+                    <bnd><![CDATA[
+    -exportcontents:\
+     javax.annotation,\
+     javax.annotation.concurrent,\
+     javax.annotation.meta
+    -nodefaultversion:true
+    Bundle-SymbolicName:org.jsr-305
+    ]]></bnd>
         </configuration>
       </plugin>
       <plugin>
