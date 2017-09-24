@@ -1,0 +1,19 @@
+language: java
+sudo: false
+dist: trusty
+
+jdk:
+  # To build .class file in Java 1.5 format, we need JDK7 (JDK8 does not support it)
+  - openjdk7
+
+addons:
+  apt:
+    packages:
+      # To build module-info.java, we need JDK9
+      - oracle-java9-installer
+      - oracle-java9-set-default
+
+install:
+  - ./mvnw install -B -V -t .travis/toolchains.xml  -Dgpg.skip -DskipTests -Dmaven.javadoc.skip -pl ri -am
+script:
+  - ./mvnw test -B -V -t .travis/toolchains.xml -pl ri -am
